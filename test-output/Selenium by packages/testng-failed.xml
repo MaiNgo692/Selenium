@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Selenium by packages]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="testsuite(failed)">
+    <classes>
+      <class name="testsuite.editProject">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="editProjectSuccessfully"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- testsuite.editProject -->
+      <class name="testsuite.deleteProject">
+        <methods>
+          <include name="deleteProjectSuccessfully"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- testsuite.deleteProject -->
+      <class name="testsuite.screen">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="hideClientPriceStartdate"/>
+          <include name="hideClient"/>
+        </methods>
+      </class> <!-- testsuite.screen -->
+      <class name="testsuite.filterProject">
+        <methods>
+          <include name="filterHighPriorityProductByButton"/>
+          <include name="filterCompletedProductByButton"/>
+          <include name="filterManyConditionsProductByFilterForm"/>
+          <include name="filterUpcomingProductByButton"/>
+          <include name="clearFilterProductBy"/>
+          <include name="openBrowser"/>
+          <include name="filterCompletedProductBySelectBox"/>
+          <include name="filterOpenProductByButton"/>
+          <include name="closeBrowser"/>
+          <include name="filterUpcomingProductBySelectBox"/>
+          <include name="filterOpenProductBySelectBox"/>
+          <include name="filterLableHighPriorityProductBySelectBox"/>
+        </methods>
+      </class> <!-- testsuite.filterProject -->
+    </classes>
+  </test> <!-- testsuite(failed) -->
+</suite> <!-- Failed suite [Selenium by packages] -->

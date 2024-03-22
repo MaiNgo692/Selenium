@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-20T16:04:52 JST" name="Default suite" finished-at="2024-03-20T16:06:36 JST" duration-ms="103619">
+    <groups>
+    </groups>
+    <test started-at="2024-03-20T16:04:52 JST" name="Default test" finished-at="2024-03-20T16:06:36 JST" duration-ms="103619">
+      <class name="testsuite.Events">
+        <test-method is-config="true" signature="openPage()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:04:52 JST" name="openPage" finished-at="2024-03-20T16:04:58 JST" duration-ms="5963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="AddEventSuccessfully()[pri:1, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:04:58 JST" name="AddEventSuccessfully" finished-at="2024-03-20T16:05:02 JST" duration-ms="3922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddEventSuccessfully -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:02 JST" name="closeBrowser" finished-at="2024-03-20T16:05:03 JST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openPage()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:03 JST" name="openPage" finished-at="2024-03-20T16:05:08 JST" duration-ms="5270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="deleteEventSuccessfully()[pri:2, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:08 JST" name="deleteEventSuccessfully" finished-at="2024-03-20T16:05:42 JST" duration-ms="34078" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteEventSuccessfully -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:42 JST" name="closeBrowser" finished-at="2024-03-20T16:05:42 JST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openPage()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:42 JST" name="openPage" finished-at="2024-03-20T16:05:48 JST" duration-ms="6193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="displayByCurrentDay()[pri:3, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:48 JST" name="displayByCurrentDay" finished-at="2024-03-20T16:05:50 JST" duration-ms="1928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- displayByCurrentDay -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:50 JST" name="closeBrowser" finished-at="2024-03-20T16:05:50 JST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openPage()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:50 JST" name="openPage" finished-at="2024-03-20T16:05:56 JST" duration-ms="5638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="displayByCurrentMonth()[pri:3, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:56 JST" name="displayByCurrentMonth" finished-at="2024-03-20T16:05:58 JST" duration-ms="2285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- displayByCurrentMonth -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:58 JST" name="closeBrowser" finished-at="2024-03-20T16:05:58 JST" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openPage()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:05:58 JST" name="openPage" finished-at="2024-03-20T16:06:03 JST" duration-ms="4997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="displayByCurrentWeek()[pri:3, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:03 JST" name="displayByCurrentWeek" finished-at="2024-03-20T16:06:05 JST" duration-ms="2004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- displayByCurrentWeek -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:05 JST" name="closeBrowser" finished-at="2024-03-20T16:06:05 JST" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openPage()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:05 JST" name="openPage" finished-at="2024-03-20T16:06:12 JST" duration-ms="6343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="displayByNextMonth()[pri:3, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:12 JST" name="displayByNextMonth" finished-at="2024-03-20T16:06:14 JST" duration-ms="2114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- displayByNextMonth -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:14 JST" name="closeBrowser" finished-at="2024-03-20T16:06:14 JST" duration-ms="128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openPage()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:14 JST" name="openPage" finished-at="2024-03-20T16:06:19 JST" duration-ms="5050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="displayByNextWeek()[pri:3, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:19 JST" name="displayByNextWeek" finished-at="2024-03-20T16:06:21 JST" duration-ms="2155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- displayByNextWeek -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:21 JST" name="closeBrowser" finished-at="2024-03-20T16:06:21 JST" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openPage()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:21 JST" name="openPage" finished-at="2024-03-20T16:06:26 JST" duration-ms="5143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="displayByPreviousMonth()[pri:3, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:26 JST" name="displayByPreviousMonth" finished-at="2024-03-20T16:06:29 JST" duration-ms="2049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- displayByPreviousMonth -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:29 JST" name="closeBrowser" finished-at="2024-03-20T16:06:29 JST" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="openPage()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:29 JST" name="openPage" finished-at="2024-03-20T16:06:34 JST" duration-ms="5253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="displayByPreviousWeek()[pri:3, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:34 JST" name="displayByPreviousWeek" finished-at="2024-03-20T16:06:36 JST" duration-ms="2025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- displayByPreviousWeek -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testsuite.Events@70cf32e3]" started-at="2024-03-20T16:06:36 JST" name="closeBrowser" finished-at="2024-03-20T16:06:36 JST" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testsuite.Events -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

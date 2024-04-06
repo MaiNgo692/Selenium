@@ -19,7 +19,7 @@ public class Events extends CommonBase{
 	public void openPage() {
 		driver = initChromeDriver(CT_Account.webURL);
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction("admin@demo.com", "riseDemo");
+		login.LoginFunction("admin@demo.com", "riseDemo","");
 		this.events = new EventsPage(driver);
 	}
 	

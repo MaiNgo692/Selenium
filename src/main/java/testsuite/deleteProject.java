@@ -24,7 +24,7 @@ public class deleteProject extends CommonBase {
 	@Test
 	public void deleteProjectSuccessfully() throws InterruptedException {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction("admin@demo.com", "riseDemo");
+		login.LoginFunction("admin@demo.com", "riseDemo","");
 		click(By.linkText("Projects"));
 		//find new added project by title
 		ProjectPageFactory projPage = new ProjectPageFactory(driver);

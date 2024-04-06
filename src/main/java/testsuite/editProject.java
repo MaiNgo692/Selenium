@@ -33,7 +33,7 @@ public class editProject extends CommonBase {
 		String oldProjectName = "new added project 2";
 		String newProjectName = "new added project 1";
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction("admin@demo.com	", "riseDemo");
+		login.LoginFunction("admin@demo.com	", "riseDemo","");
 		click(By.linkText("Projects"));
 		// click button all projects
 		click(By.xpath("//button[text()='All projects']"));

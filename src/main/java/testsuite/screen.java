@@ -26,7 +26,7 @@ public class screen extends CommonBase {
 	public void hideClient() {
 		//go to project screen
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction("admin@demo.com", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));
 		//
 		click(filterHideBox);
@@ -41,7 +41,7 @@ public class screen extends CommonBase {
 	public void hideClientPriceStartdate() {
 		//go to project screen
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction("admin@demo.com", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));
 		//
 		click(filterHideBox);

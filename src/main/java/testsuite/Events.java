@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 
 import automation.common.CommonBase;
 import automation.constant.CT_Account;
-import automation.pageLocator.LoginPageFactory;
 import automation.pageLocator.EventsPage;
+import automation.pageLocator.LoginPageFactory;
 
 public class Events extends CommonBase{
 	private EventsPage events;

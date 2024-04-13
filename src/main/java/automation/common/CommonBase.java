@@ -3,6 +3,7 @@ package automation.common;
 import static org.testng.Assert.assertTrue;
 
 import java.text.SimpleDateFormat;
+
 import java.time.Duration;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -18,6 +19,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -89,7 +91,16 @@ public class CommonBase {
 			return false;
 		}
 	}
-
+	public void type(By locator, String value) {
+		WebElement element = getElementPresentDOM(locator);
+		element.clear();
+		element.sendKeys(value);
+	}
+	
+	public void typeKeyTabs(By locator) {
+		WebElement element = getElementPresentDOM(locator);
+		element.sendKeys(Keys.TAB);
+	}
 	public void click(By locator) {
 		WebElement element = getElementPresentDOM(locator);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
@@ -101,11 +112,10 @@ public class CommonBase {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
 	}
-
-	public void type(By locator, String value) {
-		WebElement element = getElementPresentDOM(locator);
-		element.sendKeys(value);
-	}
+//	public void type(By locator, String value) {
+//		WebElement element = getElementPresentDOM(locator);
+//		element.sendKeys(value);
+//	}
 
 	public void type(WebElement element, String value) {
 		element.clear();

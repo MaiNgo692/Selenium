@@ -27,18 +27,18 @@ public class UploadFileAlada extends CommonBase {
 	
 	@Test
 	public void testUploadFile() {
-		pause(300);
+		pause(30);
 		click(By.xpath("//div[@class ='avatar2']"));
-		pause(300);
+		pause(30);
 		click(By.xpath("//a[text()='Chỉnh sửa thông tin']"));
-		pause(300);
+		pause(30);
 		WebElement upload = driver.findElement(By.id("hdn_member_avata"));
 		upload.sendKeys("D://image/1650267128442tải xuống.jpg");
 		pause(3000);
 	}
 	
-	@AfterMethod
-	  public void closeBrowser() {
-		 quitDriver(driver);
-	 }
+//	@AfterMethod
+//	  public void closeBrowser() {
+//		 quitDriver(driver);
+//	 }
 }

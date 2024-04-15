@@ -2,10 +2,14 @@ package automation.common;
 
 import static org.testng.Assert.assertTrue;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -256,41 +260,31 @@ public class CommonBase {
 		String generatedString = RandomStringUtils.randomAlphabetic(5);
 		return (generatedString);
 	}
-	
-	public String getCurrentDateTime() {
+	public LocalDate pasteStringToDate(String formatDate,String pasteValue) {
+		DateTimeFormatter sdf = DateTimeFormatter.ofPattern(formatDate,Locale.ENGLISH);
+		return LocalDate.parse(pasteValue,sdf);
+	}
+	public LocalDate convertToLocalDateViaSqlDate(Date dateToConvert) {
+	    return new java.sql.Date(dateToConvert.getTime()).toLocalDate();
+	}
+	public String getCurrentDateTime(String formatDate) {
 		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat df = new SimpleDateFormat(formatDate);//"dd-MM-yyyy"
 		// calendar.set(Calendar.MONTH, calendar.get(Calendar.MONTH));
 		String currentdateTime = df.format(calendar.getTime());
 		System.out.println("Current day - month - year: " + currentdateTime);
 		return currentdateTime;
 	}
-	public String getCurrentDateTime1() {
+	public String getCurrentMonth(String formatDate) {
 		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-		// calendar.set(Calendar.MONTH, calendar.get(Calendar.MONTH));
-		String currentdateTime = df.format(calendar.getTime());
-		System.out.println("Current day - month - year: " + currentdateTime);
-		return currentdateTime;
-	}
-	public String getCurrentDateTime2() {
-		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat df = new SimpleDateFormat("MMMM dd, yyyy");
-		// calendar.set(Calendar.MONTH, calendar.get(Calendar.MONTH));
-		String currentdateTime = df.format(calendar.getTime());
-		System.out.println("Current day - month - year: " + currentdateTime);
-		return currentdateTime;
-	}
-	public String getCurrentMonth() {
-		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat df = new SimpleDateFormat("MMMM yyyy");
+		SimpleDateFormat df = new SimpleDateFormat(formatDate);//"MMMM yyyy"
 		String currentMonth = df.format(calendar.getTime());
 		System.out.println("currentMonthAsString: " + currentMonth);
 		return currentMonth;
 	}
-	public String getNext1MonthFromCurrentMonth1() {
+	public String getNext1MonthFromCurrentMonth1(String formatDate) {
 		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat df = new SimpleDateFormat("MMMM yyyy");
+		SimpleDateFormat df = new SimpleDateFormat(formatDate);//"MMMM yyyy"
 		calendar.set(Calendar.MONTH, calendar.get(Calendar.MONTH));
 		String currentMonth = df.format(calendar.getTime());
 		System.out.println("current Month: " + currentMonth);
@@ -300,9 +294,9 @@ public class CommonBase {
 		System.out.println("NextMonth from curent month: " + nextMonth);
 		return nextMonth;
 	}
-	public String getPrevious1MonthFromCurrentMonth1() {
+	public String getPrevious1MonthFromCurrentMonth1(String formatDate) {
 		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat df = new SimpleDateFormat("MMMM yyyy");
+		SimpleDateFormat df = new SimpleDateFormat("formatDate");//"MMMM yyyy"
 		calendar.set(Calendar.MONTH, calendar.get(Calendar.MONTH));
 		String currentMonth = df.format(calendar.getTime());
 		System.out.println("current Month: " + currentMonth);
@@ -312,10 +306,42 @@ public class CommonBase {
 		System.out.println("PreviousMonth from curent month: " + nextMonth);
 		return nextMonth;
 	}
-	public String getNext7DaysOfCurrentDateTime() {
+	public String getPrevious1DaysOfCurrentDateTime(String formatDate) {
 		Calendar calendar = Calendar.getInstance();
-		SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat df = new SimpleDateFormat(formatDate);//"dd-MM-yyyy"
+		calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH)  -1);
+		String next7Days = df.format(calendar.getTime());
+		System.out.println("Next 7 days from current day: " + next7Days);
+		 return next7Days;
+	}
+	public String getPrevious7DaysOfCurrentDateTime(String formatDate) {
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat df = new SimpleDateFormat(formatDate);//"dd-MM-yyyy"
+		calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) - 7);
+		String next7Days = df.format(calendar.getTime());
+		System.out.println("Next 7 days from current day: " + next7Days);
+		 return next7Days;
+	}
+	public String getNextDaysOfCurrentDateTime(String formatDate) {
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat df = new SimpleDateFormat(formatDate);//"dd-MM-yyyy"
+		calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 1);
+		String next7Days = df.format(calendar.getTime());
+		System.out.println("Next 7 days from current day: " + next7Days);
+		 return next7Days;
+	}
+	public String getNext7DaysOfCurrentDateTime(String formatDate) {
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat df = new SimpleDateFormat(formatDate);//"dd-MM-yyyy"
 		calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 7);
+		String next7Days = df.format(calendar.getTime());
+		System.out.println("Next 7 days from current day: " + next7Days);
+		 return next7Days;
+	}
+	public String getNext15DaysOfCurrentDateTime(String formatDate) {
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat df = new SimpleDateFormat(formatDate);//"dd-MM-yyyy"
+		calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 15);
 		String next7Days = df.format(calendar.getTime());
 		System.out.println("Next 7 days from current day: " + next7Days);
 		 return next7Days;

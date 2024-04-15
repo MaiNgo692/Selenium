@@ -32,8 +32,8 @@ public class EventsPage extends CommonBase {
 		click(By.xpath(sidebarEvents));
 		click(By.xpath(addEvents));
 		type(By.id(idAddEventTitle), eventName);
-		type(By.id(idAddEventStartDate), getCurrentDateTime());
-		type(By.id(idAddEventEndDate), getCurrentDateTime());
+		type(By.id(idAddEventStartDate), getCurrentDateTime("dd-MM-yyyy"));
+		type(By.id(idAddEventEndDate), getCurrentDateTime("dd-MM-yyyy"));
 		click(By.xpath(addEventsSave));
 	}
 

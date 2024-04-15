@@ -26,33 +26,33 @@ public class Events extends CommonBase{
 	@Test(priority = 1)
 	public void AddEventSuccessfully() {
 		events.AddNewEvent("Test Auto Class");
-		assertTrue(getElementPresentDOM(By.xpath("//span[text()=' Test Auto Class']/ancestor::td[@data-date='"+getCurrentDateTime1()+"']")).isDisplayed());
+		assertTrue(getElementPresentDOM(By.xpath("//span[text()=' Test Auto Class']/ancestor::td[@data-date='"+getCurrentDateTime("yyyy-MM-dd")+"']")).isDisplayed());
 	}
 	
 	@Test(priority = 2)
 	public void deleteEventSuccessfully() {
 		events.deleteNewEvent("Test Auto Class");
 		pause(1000);
-		System.out.println("//span[text()=' Test Auto Class']/ancestor::td[@data-date='"+getCurrentDateTime1()+"']");
-		assertFalse(isElementPresent(By.xpath("//span[text()=' Test Auto Class']/ancestor::td[@data-date='"+getCurrentDateTime1()+"']")));
+		System.out.println("//span[text()=' Test Auto Class']/ancestor::td[@data-date='"+getCurrentDateTime("yyyy-MM-dd")+"']");
+		assertFalse(isElementPresent(By.xpath("//span[text()=' Test Auto Class']/ancestor::td[@data-date='"+getCurrentDateTime("yyyy-MM-dd")+"']")));
 	}
 	@Test(priority = 3)
 	public void displayByCurrentMonth() {
 		events.displayByCurrentMonth();
-		System.out.println("//h2[@class='fc-toolbar-title' and text()='"+getCurrentMonth()+"']");
-		assertTrue(isElementPresent(By.xpath("//h2[@class='fc-toolbar-title' and text()='"+getCurrentMonth()+"']")));
+		System.out.println("//h2[@class='fc-toolbar-title' and text()='"+getCurrentMonth("MMMM yyyy")+"']");
+		assertTrue(isElementPresent(By.xpath("//h2[@class='fc-toolbar-title' and text()='"+getCurrentMonth("MMMM yyyy")+"']")));
 	}
 	@Test(priority = 3)
 	public void displayByNextMonth() {
 		events.displayByNextMonth();
-		System.out.println("//h2[@class='fc-toolbar-title' and text()='"+getNext1MonthFromCurrentMonth1()+"']");
-		assertTrue(isElementPresent(By.xpath("//h2[@class='fc-toolbar-title' and text()='"+getNext1MonthFromCurrentMonth1()+"']")));
+		System.out.println("//h2[@class='fc-toolbar-title' and text()='"+getNext1MonthFromCurrentMonth1("MMMM yyyy")+"']");
+		assertTrue(isElementPresent(By.xpath("//h2[@class='fc-toolbar-title' and text()='"+getNext1MonthFromCurrentMonth1("MMMM yyyy")+"']")));
 	}
 	@Test(priority = 3)
 	public void displayByPreviousMonth() {
 		events.displayByPreviousMonth();
-		System.out.println("//h2[@class='fc-toolbar-title' and text()='"+getPrevious1MonthFromCurrentMonth1()+"']");
-		assertTrue(isElementPresent(By.xpath("//h2[@class='fc-toolbar-title' and text()='"+getPrevious1MonthFromCurrentMonth1()+"']")));
+		System.out.println("//h2[@class='fc-toolbar-title' and text()='"+getPrevious1MonthFromCurrentMonth1("MMMM yyyy")+"']");
+		assertTrue(isElementPresent(By.xpath("//h2[@class='fc-toolbar-title' and text()='"+getPrevious1MonthFromCurrentMonth1("MMMM yyyy")+"']")));
 	}
 	@Test(priority = 3)
 	public void displayByCurrentWeek() {
@@ -75,8 +75,8 @@ public class Events extends CommonBase{
 	@Test(priority = 3)
 	public void displayByCurrentDay() {
 		events.displayByCurrentDay();
-		System.out.println("//h2[@class='fc-toolbar-title' and text()='"+getCurrentDateTime2()+"']");
-		assertTrue(isElementPresent(By.xpath("//h2[@class='fc-toolbar-title' and text()='"+getCurrentDateTime2()+"']")));
+		System.out.println("//h2[@class='fc-toolbar-title' and text()='"+getCurrentDateTime("MMMM dd, yyyy")+"']");
+		assertTrue(isElementPresent(By.xpath("//h2[@class='fc-toolbar-title' and text()='"+getCurrentDateTime("MMMM dd, yyyy")+"']")));
 	}
 	@AfterMethod
 	  public void closeBrowser() {

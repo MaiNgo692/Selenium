@@ -18,6 +18,8 @@ public class ClientsPage extends CommonBase{
 	private String inputClientGroups = "//input[@id='s2id_autogen8_search']";
 	private String dropdownLabel = "//div[@id='s2id_autogen9']";
 	private String inputLabel= "//input[@id='s2id_autogen10_search']";
+	private String listfilteredClientGroup= "//table[@id='client-table']//tbody//tr/child::td[5]//li";
+	private String listfilteredLable= "//table[@id='client-table']//tbody//tr/child::td[6]/span";
 	private WebDriver driver;
 
 	public ClientsPage(WebDriver _driver) {
@@ -39,11 +41,11 @@ public class ClientsPage extends CommonBase{
 		assertListfilterClientGroupAndLable(clientGroup,lable);
 	}
 	private void assertListfilterClientGroupAndLable(String clientGroup, String lable) {
-		List<WebElement> listfilterClientGroup = driver.findElements(By.xpath("//table[@id='client-table']//tbody//tr/child::td[5]//li"));
+		List<WebElement> listfilterClientGroup = driver.findElements(By.xpath(listfilteredClientGroup));
 		for(WebElement item : listfilterClientGroup) {
 			assertEquals(item.getText(),clientGroup);
 		}
-		List<WebElement> listfilterLable = driver.findElements(By.xpath("//table[@id='client-table']//tbody//tr/child::td[6]/span"));
+		List<WebElement> listfilterLable = driver.findElements(By.xpath(listfilteredLable));
 		for(WebElement item : listfilterLable) {
 			assertEquals(item.getText(),lable);
 		}

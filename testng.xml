@@ -8,9 +8,9 @@
         <parameter name="browserTest" value="firefox"></parameter>
         <classes>
             <class name="testsuite.filterTasks"/>
-            
-            <!-- 
             <class name="testsuite.editProject"/>
+            <!-- 
+            
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
             <class name="testsuite.filterProject"/>

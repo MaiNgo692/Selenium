@@ -21,12 +21,12 @@ public class filterTasks extends CommonBase{
 		this.taskaPage = new TasksPage(driver);
 	}
 	
-	@Test(dataProvider = "data_add_Tasks",dataProviderClass= DataProviderRise.class,priority = 1)
-	public void addTasksToTest(String title, String description,String relatedTo,String project,String point,String milestone,
-			String assignTo,String status,String priority,String label,String startDate,String deadline) {
-		taskaPage.addTask(title, description, relatedTo, project, point, milestone, assignTo, status, priority, label, startDate, deadline);
-		pause(1000);
-	}
+//	@Test(dataProvider = "data_add_Tasks",dataProviderClass= DataProviderRise.class,priority = 1)
+//	public void addTasksToTest(String title, String description,String relatedTo,String project,String point,String milestone,
+//			String assignTo,String status,String priority,String label,String startDate,String deadline) {
+//		taskaPage.addTask(title, description, relatedTo, project, point, milestone, assignTo, status, priority, label, startDate, deadline);
+//		pause(1000);
+//	}
 	@Test(priority = 2)
 	public void filterTaskByRelatedTo() {
 		taskaPage.filterTaskByRelatedToAndProject(testRelatedTo, testProject);

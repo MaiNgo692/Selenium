@@ -7,12 +7,15 @@
     <test name="Regression with firefox">
         <parameter name="browserTest" value="firefox"></parameter>
         <classes>
+            <class name="testsuite.filterTasks"/>
+            
             <!-- 
             <class name="testsuite.editProject"/>
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
             <class name="testsuite.filterProject"/>
-            
+            <class name="testsuite.Events"/>
+            <class name="testsuite.LoginTest_DataProvider"/>
             <class name="labelfunction.LA1"/>
 		    <class name="labelfunction.LA2"/>
 		    <class name="labelfunction.LA3"/>
@@ -32,7 +35,16 @@
     <test name="Regression with edge">
         <parameter name="browserTest" value="edge"></parameter>
         <classes>
-			<!--  <class name="testsuite.editProject"/>
+			<class name="testsuite.filterTasks"/>
+            
+			<!--  
+			<class name="testsuite.editProject"/>
+            <class name="testsuite.deleteProject"/>
+            <class name="testsuite.screen"/>
+            <class name="testsuite.filterProject"/>
+            <class name="testsuite.Events"/>
+            <class name="testsuite.LoginTest_DataProvider"/>
+			<class name="testsuite.editProject"/>
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
             <class name="testsuite.filterProject"/>
@@ -57,8 +69,16 @@
  <test name="Regression with chrome">
         <parameter name="browserTest" value="chrome"></parameter>
         <classes>
+			<class name="testsuite.filterTasks"/>
+            
 			<!--  
-             <class name="testsuite.editProject"/>
+			<class name="testsuite.editProject"/>
+            <class name="testsuite.deleteProject"/>
+            <class name="testsuite.screen"/>
+            <class name="testsuite.filterProject"/>
+            <class name="testsuite.Events"/>
+            <class name="testsuite.LoginTest_DataProvider"/>
+            <class name="testsuite.editProject"/>
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
             <class name="testsuite.filterProject"/>
@@ -75,8 +95,8 @@
       		<class name="addprojectfunction.P2"/>
       		<class name="addprojectfunction.P3"/>
       		<class name="addprojectfunction.P4"/>
-      		<class name="addprojectfunction.P5"/>-->
-      		<class name="testsuite.Event"/>
+      		<class name="addprojectfunction.P5"/>
+      		<class name="testsuite.Event"/>-->
         </classes>
     </test>
 </suite>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testsuite.Events">
+      <class name="testsuite.filterTasks">
         <methods>
-          <include name="closeBrowser"/>
           <include name="openPage"/>
-          <include name="deleteEventSuccessfully"/>
+          <include name="closeBrowser"/>
+          <include name="addTasksToTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testsuite.Events -->
+      </class> <!-- testsuite.filterTasks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

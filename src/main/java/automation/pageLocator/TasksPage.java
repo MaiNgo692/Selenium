@@ -17,6 +17,7 @@ import automation.common.CommonBase;
 
 public class TasksPage extends CommonBase{
 	private String sidebarTasks = "//span[text()='Tasks']";
+	private String aTagList = "//a[text()='List']";
 	//filter element
 		private String buttonPlus = "//button[@class='btn btn-default show-filter-form-button']";
 		private String dropdownRelateTo = "//div[@id='s2id_autogen5']";
@@ -142,6 +143,7 @@ public class TasksPage extends CommonBase{
 	}
 	public void doFilter() {
 		click(By.xpath(sidebarTasks));
+		click(By.xpath(aTagList));
 		click(By.xpath(buttonPlus));
 	}
 	public void filterTaskByRelatedToAndProject(String relatedValue,String projectValue) {
@@ -173,8 +175,8 @@ public class TasksPage extends CommonBase{
 		// nhap dropdownMilestone 
 		type(By.xpath(inputTeamMember), teamMember);
 		typeKeyTabs(By.xpath(inputTeamMember));
-		pause(3000);
-		assertListFilter(listFilteredTeamMember,teamMember);
+		pause(2000);
+		assertListFilterTeamMember(listFilteredTeamMember,teamMember);
 	}
 	public void filterTaskByPriority(String priority) {
 		doFilter();
@@ -210,7 +212,7 @@ public class TasksPage extends CommonBase{
 				break;
 			case "Today":
 				click(By.xpath(deadlineToday));
-				pause(1000);
+				pause(3000);
 				deadlineDate=calendar.getTime();
 				System.out.println("dealine:"+ deadlineDate);
 				assertListFilterDeadline(deadlineDate);
@@ -321,6 +323,26 @@ public class TasksPage extends CommonBase{
 				System.out.println("text of table: "+item.getText());
 				System.out.println("text:"+valueFilter);
 				assertEquals(item.getText().trim(),valueFilter.trim());
+			}
+		}
+		
+	}
+	private void assertListFilterTeamMember(String filterAssigned,String valueFilter) {
+		List<WebElement> listFilterParam = driver.findElements(By.xpath(filterAssigned));
+		if(listFilterParam.size()!=0) {
+			for (int i=0; i<listFilterParam.size(); i++) {
+				System.out.println("assigned of table: "+listFilterParam.get(i).getText());
+				System.out.println("team :"+valueFilter);
+				System.out.println("check :"+listFilterParam.get(i).getText().trim().equals(valueFilter.trim()));
+				if(!listFilterParam.get(i).getText().trim().equals(valueFilter.trim())) {
+					String collaborator ="//table[@id='task-table']//tbody//tr/child::td[7]//a["+ (i+1) +"]/parent::td/following-sibling::td/a";
+					System.out.println("team :"+collaborator);
+					WebElement Collaborator = driver.findElement(By.xpath(collaborator));
+					System.out.println("team :"+Collaborator.getAttribute("title").trim());
+					assertEquals(Collaborator.getAttribute("title").trim(),valueFilter.trim());
+				}else {
+					assertEquals(listFilterParam.get(i).getText().trim(),valueFilter.trim());
+				}
 			}
 		}
 		

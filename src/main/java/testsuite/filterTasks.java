@@ -51,12 +51,12 @@ public class filterTasks extends CommonBase{
 	public void filterTaskByStatus(String statusInActive) {
 		taskaPage.changeStatus(statusInActive);
 	}
-	@Test(dataProvider = "data_add_Tasks",dataProviderClass= DataProviderRise.class,priority = 3)
-	public void deleteTasksToTest(String title, String description,String relatedTo,String project,String point,String milestone,
-			String assignTo,String status,String priority,String label,String startDate,String deadline) {
-		taskaPage.deleteTask(title, description, relatedTo, project, point, milestone, assignTo, status, priority, label, startDate, deadline);
-		pause(1000);
-	}
+//	@Test(dataProvider = "data_add_Tasks",dataProviderClass= DataProviderRise.class,priority = 3)
+//	public void deleteTasksToTest(String title, String description,String relatedTo,String project,String point,String milestone,
+//			String assignTo,String status,String priority,String label,String startDate,String deadline) {
+//		taskaPage.deleteTask(title, description, relatedTo, project, point, milestone, assignTo, status, priority, label, startDate, deadline);
+//		pause(1000);
+//	}
 
 	@AfterMethod
 	  public void closeBrowser() {

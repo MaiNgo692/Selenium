@@ -164,7 +164,7 @@ public class TasksPage extends CommonBase{
 		// nhap dropdownMilestone 
 		type(By.xpath(inputMilestone), milestone);
 		typeKeyTabs(By.xpath(inputMilestone));
-		pause(1000);
+		pause(2000);
 		assertListFilter(listFilteredMilestone,milestone);
 	}
 	public void filterTaskBydropdownTeamMember(String teamMember) {
@@ -182,7 +182,7 @@ public class TasksPage extends CommonBase{
 		// nhap dropdownMilestone 
 		type(By.xpath(inputPriority), priority);
 		typeKeyTabs(By.xpath(inputPriority));
-		pause(1000);
+		pause(2000);
 		assertListFilterPriority(listFilteredPriority,priority);
 	}
 	public void filterTaskByLabel(String label) {
@@ -191,7 +191,7 @@ public class TasksPage extends CommonBase{
 		// nhap dropdownMilestone 
 		type(By.xpath(inputLabel), label);
 		typeKeyTabs(By.xpath(inputLabel));
-		pause(1000);
+		pause(2000);
 		assertListFilter(listFilteredLabel,label);
 	}
 	public void filterTaskByDeadline(String deadlineType) {
@@ -210,12 +210,14 @@ public class TasksPage extends CommonBase{
 				break;
 			case "Today":
 				click(By.xpath(deadlineToday));
+				pause(1000);
 				deadlineDate=calendar.getTime();
 				System.out.println("dealine:"+ deadlineDate);
 				assertListFilterDeadline(deadlineDate);
 				break;
 			case "Tomorrow":
 				click(By.xpath(deadlineTomorrow));
+				pause(1000);
 				calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH)  +1);
 				deadlineDate=calendar.getTime();
 				System.out.println("dealine:"+ deadlineDate);
@@ -223,6 +225,7 @@ public class TasksPage extends CommonBase{
 				break;
 			case "In 7 days":
 				click(By.xpath(deadlineIn7Days));
+				pause(1000);
 				calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH)  +7);
 				deadlineDate=calendar.getTime();
 				System.out.println("dealine:"+ deadlineDate);
@@ -230,6 +233,7 @@ public class TasksPage extends CommonBase{
 				break;
 			case "In 15 days":
 				click(By.xpath(deadlineIn15Days));
+				pause(1000);
 				calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH)  +15);
 				deadlineDate=calendar.getTime();
 				System.out.println("dealine:"+ deadlineDate);

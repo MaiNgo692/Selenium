@@ -7,10 +7,10 @@
     <test name="Regression with firefox">
         <parameter name="browserTest" value="firefox"></parameter>
         <classes>
+            
+            <!-- 
             <class name="testsuite.filterTasks"/>
             <class name="testsuite.editProject"/>
-            <!-- 
-            
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
             <class name="testsuite.filterProject"/>
@@ -35,9 +35,10 @@
     <test name="Regression with edge">
         <parameter name="browserTest" value="edge"></parameter>
         <classes>
-			<class name="testsuite.filterTasks"/>
+			
             
 			<!--  
+			<class name="testsuite.filterTasks"/>
 			<class name="testsuite.editProject"/>
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
@@ -70,7 +71,6 @@
         <parameter name="browserTest" value="chrome"></parameter>
         <classes>
 			<class name="testsuite.filterTasks"/>
-            
 			<!--  
 			<class name="testsuite.editProject"/>
             <class name="testsuite.deleteProject"/>

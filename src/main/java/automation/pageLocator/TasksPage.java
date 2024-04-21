@@ -199,13 +199,14 @@ public class TasksPage extends CommonBase{
 	public void filterTaskByDeadline(String deadlineType) {
 		doFilter();
 		click(By.xpath(buttonDeadline));
+		pause(3000);
 		Calendar calendar = Calendar.getInstance();
 		Date deadlineDate;
 		// nhap dropdownMilestone 
 		switch(deadlineType) {
 			case "Expired":
 				click(By.xpath(deadlineExprired));
-				pause(2000);
+				pause(3000);
 				deadlineDate=calendar.getTime();
 				System.out.println("dealine:"+ deadlineDate);
 				assertListFilterDeadline(deadlineDate);

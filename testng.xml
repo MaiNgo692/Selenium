@@ -70,7 +70,7 @@
  <test name="Regression with chrome">
         <parameter name="browserTest" value="chrome"></parameter>
         <classes>
-			<class name="testsuite.filterTasks"/>
+			<class name="testsuite.UploadFile_guru99"/>
 			<!--  
 			<class name="testsuite.editProject"/>
             <class name="testsuite.deleteProject"/>

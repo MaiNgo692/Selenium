@@ -1,6 +1,5 @@
 package testsuite;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -9,7 +8,6 @@ import automation.common.CommonBase;
 import automation.constant.CT_Account;
 import automation.constant.DataProviderRise;
 import automation.pageLocator.ClientsPage;
-import automation.pageLocator.EventsPage;
 import automation.pageLocator.LoginPageFactory;
 
 public class filterClients extends CommonBase{
@@ -19,7 +17,12 @@ public class filterClients extends CommonBase{
 	public void openPage() throws InterruptedException {
 		driver = initChromeDriver(CT_Account.webURL);
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction("admin@demo.com", "riseDemo","");
+		try {
+			login.LoginFunction("admin@demo.com", "riseDemo","");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		this.client = new ClientsPage(driver);
 	}
 	@Test(dataProvider = "data_Rise_Filter_Client",dataProviderClass= DataProviderRise.class)

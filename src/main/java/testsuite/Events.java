@@ -19,7 +19,12 @@ public class Events extends CommonBase{
 	public void openPage() throws InterruptedException {
 		driver = initChromeDriver(CT_Account.webURL);
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction("admin@demo.com", "riseDemo","");
+		try {
+			login.LoginFunction("admin@demo.com", "riseDemo","");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		this.events = new EventsPage(driver);
 	}
 	

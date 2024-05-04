@@ -26,7 +26,12 @@ public class screen extends CommonBase {
 	public void hideClient() throws InterruptedException {
 		//go to project screen
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com", "riseDemo");
+		try {
+			login.LoginFunction1("admin@demo.com", "riseDemo");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		click(By.linkText("Projects"));
 		//
 		click(filterHideBox);

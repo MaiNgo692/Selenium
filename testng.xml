@@ -72,17 +72,21 @@
         <classes>
 			<class name="testsuite.UploadFile_guru99"/>
 			 
-			<class name="testsuite.editProject"/>
+			
+            <class name="testsuite.Events"/>
+            
+            <!-- 
+            <class name="testsuite.editProject"/>
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
             <class name="testsuite.filterProject"/>
-            <class name="testsuite.Events"/>
+            
             <class name="testsuite.LoginTest_DataProvider"/>
             <class name="testsuite.editProject"/>
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
             <class name="testsuite.filterProject"/>
-            <!-- 
+            
             <class name="labelfunction.LA1"/>
 		    <class name="labelfunction.LA2"/>
 		    <class name="labelfunction.LA3"/>

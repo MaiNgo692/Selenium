@@ -71,7 +71,7 @@
         <parameter name="browserTest" value="chrome"></parameter>
         <classes>
 			<class name="testsuite.UploadFile_guru99"/>
-			<!--  
+			 
 			<class name="testsuite.editProject"/>
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
@@ -82,7 +82,7 @@
             <class name="testsuite.deleteProject"/>
             <class name="testsuite.screen"/>
             <class name="testsuite.filterProject"/>
-            
+            <!-- 
             <class name="labelfunction.LA1"/>
 		    <class name="labelfunction.LA2"/>
 		    <class name="labelfunction.LA3"/>

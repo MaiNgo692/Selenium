@@ -14,7 +14,7 @@ public class filterTasks extends CommonBase{
 	private final String testRelatedTo = "Project";
 	private final String testProject = "Online Course Creation and Launch";
 	@BeforeMethod
-	public void openPage() {
+	public void openPage() throws InterruptedException {
 		driver = initChromeDriver(CT_Account.webURL);
 		LoginPageFactory login = new LoginPageFactory(driver);
 		login.LoginFunction("admin@demo.com", "riseDemo","");

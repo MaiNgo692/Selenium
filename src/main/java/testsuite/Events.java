@@ -16,7 +16,7 @@ import automation.pageLocator.LoginPageFactory;
 public class Events extends CommonBase{
 	private EventsPage events;
 	@BeforeMethod
-	public void openPage() {
+	public void openPage() throws InterruptedException {
 		driver = initChromeDriver(CT_Account.webURL);
 		LoginPageFactory login = new LoginPageFactory(driver);
 		login.LoginFunction("admin@demo.com", "riseDemo","");

@@ -23,7 +23,7 @@ public class screen extends CommonBase {
 	}
 	
 	@Test
-	public void hideClient() {
+	public void hideClient() throws InterruptedException {
 		//go to project screen
 		LoginPageFactory login = new LoginPageFactory(driver);
 		login.LoginFunction1("admin@demo.com", "riseDemo");

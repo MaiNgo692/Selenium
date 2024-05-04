@@ -16,7 +16,7 @@ public class filterClients extends CommonBase{
 	private ClientsPage client;
 	
 	@BeforeMethod
-	public void openPage() {
+	public void openPage() throws InterruptedException {
 		driver = initChromeDriver(CT_Account.webURL);
 		LoginPageFactory login = new LoginPageFactory(driver);
 		login.LoginFunction("admin@demo.com", "riseDemo","");

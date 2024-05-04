@@ -17,12 +17,12 @@ public class LoginTest_DataProvider extends CommonBase {
 	public void openChorme() {
 		driver = initChromeDriver(CT_Account.webURL);
 //		LoginPageFactory login = new LoginPageFactory(driver);
-//		login.LoginFunction("admin@demo.com", "riseDemo");
+//		login.LoginFunction("admin@demo.com", "riseDemo","");
 //		this.events = new EventsPage(driver);
 	}
 	
 	@Test(dataProvider = "data_Rise_Login",dataProviderClass= DataProviderRise.class)
-	public void loginSuccessFully(String username, String password, String role) {
+	public void loginSuccessFully(String username, String password, String role) throws InterruptedException {
 		LoginPageFactory login = new LoginPageFactory(driver);
 		login.LoginFunction(username, password, role);
 		assertTrue(isElementPresent(CT_Account.TEXT_DASHBOARD));

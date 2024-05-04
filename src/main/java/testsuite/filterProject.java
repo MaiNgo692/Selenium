@@ -27,7 +27,7 @@ public class filterProject extends CommonBase{
 	}
 	
 	@Test(priority = 1)
-	public void filterCompletedProductBySelectBox() {
+	public void filterCompletedProductBySelectBox() throws InterruptedException {
 		LoginPageFactory login = new LoginPageFactory(driver);
 		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));

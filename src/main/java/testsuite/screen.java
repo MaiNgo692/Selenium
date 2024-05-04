@@ -23,15 +23,11 @@ public class screen extends CommonBase {
 	}
 	
 	@Test
-	public void hideClient() throws InterruptedException {
+	public void hideClient() {
 		//go to project screen
 		LoginPageFactory login = new LoginPageFactory(driver);
-		try {
-			login.LoginFunction1("admin@demo.com", "riseDemo");
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		login.LoginFunction1("admin@demo.com", "riseDemo");
+
 		click(By.linkText("Projects"));
 		//
 		click(filterHideBox);
@@ -65,7 +61,6 @@ public class screen extends CommonBase {
 		assertFalse(isElementPresent(By.xpath("//th[text()='Client']")));
 		assertFalse(isElementPresent(By.xpath("//th[text()='Price']")));
 		assertFalse(isElementPresent(By.xpath("//th[text()='Start date']")));
-		
 		pause(5000);
 	}
 	

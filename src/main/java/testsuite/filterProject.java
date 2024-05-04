@@ -27,16 +27,10 @@ public class filterProject extends CommonBase{
 	}
 	
 	@Test(priority = 1)
-	public void filterCompletedProductBySelectBox() throws InterruptedException {
+	public void filterCompletedProductBySelectBox() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		try {
-			login.LoginFunction1("admin@demo.com", "riseDemo");
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));
-		
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);
 		projectFactory.AddProjectFunction("Test Filter Completed");
 		pause(2000);
@@ -55,9 +49,9 @@ public class filterProject extends CommonBase{
 	@Test(priority = 2)
 	public void filterLableHighPriorityProductBySelectBox() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com	", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));
-		
+	
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);
 		projectFactory.AddProjectFunction("Test Filter High Priority");
 		pause(2000);
@@ -76,7 +70,7 @@ public class filterProject extends CommonBase{
 	@Test(priority = 3)
 	public void filterOpenProductBySelectBox() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com	", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));
 		
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);
@@ -97,7 +91,7 @@ public class filterProject extends CommonBase{
 	@Test(priority = 4)
 	public void filterUpcomingProductBySelectBox() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com	", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));
 		
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);
@@ -118,7 +112,7 @@ public class filterProject extends CommonBase{
 	@Test(priority = 5)
 	public void filterCompletedProductByButton() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com	", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));
 		
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);
@@ -139,7 +133,8 @@ public class filterProject extends CommonBase{
 	@Test(priority = 6)
 	public void filterHighPriorityProductByButton() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com	", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
+
 		click(By.linkText("Projects"));
 		
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);
@@ -160,7 +155,8 @@ public class filterProject extends CommonBase{
 	@Test(priority = 7)
 	public void filterOpenProductByButton() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com	", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
+
 		click(By.linkText("Projects"));
 		
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);
@@ -180,7 +176,8 @@ public class filterProject extends CommonBase{
 	@Test(priority = 8)
 	public void filterUpcomingProductByButton() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com	", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
+
 		click(By.linkText("Projects"));
 		
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);
@@ -201,7 +198,7 @@ public class filterProject extends CommonBase{
 	@Test(priority = 9)
 	public void filterManyConditionsProductByFilterForm() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com	", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));
 		
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);
@@ -223,7 +220,7 @@ public class filterProject extends CommonBase{
 	@Test(priority = 10)
 	public void clearFilterProductBy() {
 		LoginPageFactory login = new LoginPageFactory(driver);
-		login.LoginFunction1("admin@demo.com	", "riseDemo");
+		login.LoginFunction1("admin@demo.com", "riseDemo");
 		click(By.linkText("Projects"));
 		
 		ProjectPageFactory projectFactory = new ProjectPageFactory(driver);

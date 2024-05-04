@@ -17,12 +17,7 @@ public class filterClients extends CommonBase{
 	public void openPage() throws InterruptedException {
 		driver = initChromeDriver(CT_Account.webURL);
 		LoginPageFactory login = new LoginPageFactory(driver);
-		try {
-			login.LoginFunction("admin@demo.com", "riseDemo","");
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		login.LoginFunction("admin@demo.com", "riseDemo","");
 		this.client = new ClientsPage(driver);
 	}
 	@Test(dataProvider = "data_Rise_Filter_Client",dataProviderClass= DataProviderRise.class)
